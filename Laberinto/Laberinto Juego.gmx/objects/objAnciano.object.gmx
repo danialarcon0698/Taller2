@@ -33,11 +33,6 @@ Manzana=false;
 Hamburguesa=false;
 Estatua=false;
 
-g=0;
-LlaveGris=g;
-r=0;
-LlaveRoja=r;
-
 </string>
           </argument>
         </arguments>
@@ -237,8 +232,7 @@ if (place_meeting(x, y, objLlaveRoja))
         {
         instance_destroy();
         }
-    LlaveRoja = r =+ 1;
-    audio_play_sound(sndDiamante, 10, false);
+   audio_play_sound(sndDiamante, 10, false);
     }
 
 if (place_meeting(x, y, objLlaveGris))
@@ -248,7 +242,6 @@ if (place_meeting(x, y, objLlaveGris))
         {
         instance_destroy();
         }
-    LlaveGris = g =+ 1;
     audio_play_sound(sndDiamante, 10, false);
     }   
 </string>
@@ -257,73 +250,54 @@ if (place_meeting(x, y, objLlaveGris))
       </action>
       <action>
         <libid>1</libid>
-        <id>404</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_number</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>objLlaveRoja</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>404</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_number</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>objLlaveGris</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
-        <whoName>objRoca</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Gestión de Puertas 2
+
+var LlaveRoja = instance_number(objLlaveRoja);
+var LlaveGris = instance_number(objLlaveGris);
+if (LlaveRoja = 0 &amp;&amp; LlaveGris = 0)
+{
+    with(objRoca)
+    {
+        instance_destroy();
+    }    
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="4" ename="objEnemigoPadre">
