@@ -5,9 +5,52 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprPersonaje</sprite>
+    <sprite>sprites\sprPersonajeV</sprite>
+    <sprite>sprites\sprVID</sprite>
+    <sprite>sprites\sprPoderS</sprite>
+    <sprite>sprites\sprBLoque</sprite>
+    <sprite>sprites\sprEnemigo</sprite>
+    <sprite>sprites\sprPersonajePU</sprite>
+    <sprite>sprites\sprID</sprite>
+    <sprite>sprites\sprMeta</sprite>
+    <sprite>sprites\sprBala</sprite>
+    <sprite>sprites\sprPoderV</sprite>
+    <sprites name="Skins">
+      <sprite>sprites\sprPersonajeI</sprite>
+      <sprite>sprites\sprPersonajeD</sprite>
+      <sprite>sprites\sprPersonajeArriba</sprite>
+      <sprite>sprites\sprPersonajeAbajo</sprite>
+      <sprite>sprites\sprPersonajeAI</sprite>
+      <sprite>sprites\sprPersonajeAD</sprite>
+    </sprites>
+    <sprite>sprites\sprEEnemigo</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\backGameStart</background>
+    <background>background\backGameOver</background>
+    <background>background\backInGame</background>
+  </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\objBloque</object>
+    <object>objects\objPersonaje</object>
+    <object>objects\objPoderS</object>
+    <object>objects\objStart</object>
+    <object>objects\objEnemigo</object>
+    <object>objects\objMeta</object>
+    <object>objects\objBala</object>
+    <object>objects\objBalaD</object>
+    <object>objects\objPoderV</object>
+    <object>objects\objQNSC</object>
+    <object>objects\objEEnemigo</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\Start</room>
+    <room>rooms\Nivel_1</room>
+    <room>rooms\Game_Over</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
