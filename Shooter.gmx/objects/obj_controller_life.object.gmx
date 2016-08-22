@@ -101,7 +101,7 @@ for(i= 0; i &lt; lives; i+=1)
     {
     draw_sprite(spr_vida, -1, 16+32*i,410);
     }
-    ;
+    
 </string>
           </argument>
         </arguments>

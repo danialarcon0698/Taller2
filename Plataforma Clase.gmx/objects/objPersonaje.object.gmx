@@ -44,7 +44,7 @@ jumpspeed = jumpspeed_normal
 
 //disparo
 
-can_shoot = 1;
+shoot = 1;
 
 </string>
           </argument>
@@ -68,7 +68,7 @@ can_shoot = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>can_shoot = 1;
+            <string>shoot = 1;
 </string>
           </argument>
         </arguments>
@@ -188,14 +188,20 @@ if(movespeed = movespeed_normal &amp;&amp; jumpspeed = jumpspeed_normal){
     if(vsp){
     sprite_index= sprPersonajeAbajo
     } 
+    
 }
 
 else{
-    if(movespeed==movespeed_powerup){
+    if(movespeed==movespeed_powerup)&amp;&amp;(-move){
     sprite_index = sprVID
     }
-    if(jumpspeed==jumpspeed_powerup){
+     if(movespeed==movespeed_powerup)&amp;&amp;(move){
+    sprite_index = sprVIDD
+    }
+    if(jumpspeed==jumpspeed_powerup)&amp;&amp;(-move){
     sprite_index = sprID}
+    if(jumpspeed==jumpspeed_powerup)&amp;&amp;(move){
+    sprite_index = sprIDD}
 }
 
 
@@ -223,30 +229,149 @@ else{
             <kind>1</kind>
             <string>///balas
 
-fire= keyboard_check(vk_space);
+if(shoot)&amp;&amp;(hsp&gt;0)&amp;&amp;keyboard_check_pressed(vk_space){
+instance_create(x,y+7,objBala)
+shoot=0;
+alarm[2]=15;
+}
 
-if (fire)
+
+
+if(shoot)&amp;&amp;(hsp&lt;0)&amp;&amp;keyboard_check_pressed(vk_space){
+instance_create(x,y+7,objBalaI)
+shoot=0;
+alarm[2]=15;
+}
+
+
+
+if(shoot)&amp;&amp;(hsp=0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprPersonajeD){
+instance_create(x,y+7,objBala)
+shoot=0;
+alarm[2]=15;
+}
+
+if(shoot)&amp;&amp;(hsp=0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprPersonajeI){
+instance_create(x,y+7,objBalaI)
+shoot=0;
+alarm[2]=15;
+}
+
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///balas poder
+
+if(shoot)&amp;&amp;(hsp=0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprPersonajePU){
+instance_create(x,y+7,objBala)
+shoot=0;
+alarm[2]=15;
+}
+
+if(shoot)&amp;&amp;(hsp&lt;0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprID){
+instance_create(x,y+7,objBalaI)
+shoot=0;
+alarm[2]=15;
+}
+
+if(shoot)&amp;&amp;(hsp&gt;0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprIDD){
+instance_create(x,y+7,objBala)
+shoot=0;
+alarm[2]=15;
+}
+
+if(shoot)&amp;&amp;(hsp=0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprID){
+instance_create(x,y+7,objBalaI)
+shoot=0;
+alarm[2]=15;
+}
+
+if(shoot)&amp;&amp;(hsp=0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprIDD){
+instance_create(x,y+7,objBala)
+shoot=0;
+alarm[2]=15;
+}
+
+
+
+
+
+
+if(shoot)&amp;&amp;(hsp=0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprPersonajeV){
+instance_create(x,y+7,objBala)
+shoot=0;
+alarm[2]=15;
+}
+
+if(shoot)&amp;&amp;(hsp&lt;0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprVID){
+instance_create(x,y+7,objBalaI)
+shoot=0;
+alarm[2]=15;
+}
+
+if(shoot)&amp;&amp;(hsp&gt;0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprVIDD){
+instance_create(x,y+7,objBala)
+shoot=0;
+alarm[2]=15;
+}
+
+if(shoot)&amp;&amp;(hsp=0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprVID){
+instance_create(x,y+7,objBalaI)
+shoot=0;
+alarm[2]=15;
+}
+
+if(shoot)&amp;&amp;(hsp=0)&amp;&amp;keyboard_check_pressed(vk_space)&amp;&amp;(sprite_index=sprVIDD){
+instance_create(x,y+7,objBala)
+shoot=0;
+alarm[2]=15;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objTiraBalas">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+health -=15;
+with(other)
     {
-    if(can_shoot)
-        {
-          instance_create(x,y+(sprite_height/2-3), objBala);
-          can_shoot=0;
-          alarm[2]=15;
-        }
-  
-    }
-//balas
-
-
-
-if(can_shoot)&amp;&amp;(keyboard_check(vk_space)&amp;&amp;(sprite_index=sprPersonajeD))
-    {
-        {
-          instance_create(x,y+(sprite_height/2-3), objBalaD);
-          can_shoot=0;
-          alarm[2]=15;
-        }
-  
+    instance_destroy();
     }
 </string>
           </argument>
@@ -276,6 +401,34 @@ if (room_exists(room_next(room)))
     else
     {room_goto(inicio);} 
     
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objEnemigo">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+health -=12;
+with(other)
+    {
+    instance_destroy();
+    }
 </string>
           </argument>
         </arguments>
