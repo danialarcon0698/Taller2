@@ -12,6 +12,7 @@
     <sprite>sprites\sprPowerUp</sprite>
     <sprite>sprites\sprEnemigo</sprite>
     <sprite>sprites\sprNivel</sprite>
+    <sprite>sprites\sprite6</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -25,6 +26,7 @@
     <object>objects\objEnemigo</object>
     <object>objects\objNivel</object>
     <object>objects\objInicio</object>
+    <object>objects\object6</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\inicio</room>
